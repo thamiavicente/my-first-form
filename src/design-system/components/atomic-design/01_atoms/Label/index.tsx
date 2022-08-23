@@ -6,15 +6,17 @@ type Props = {
 
 export function Label({labelText}: Props) {
   const LabelInput = styled.label `
-    color: "#9f9f9f";
+    color: #9f9f9f;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 8px;
+    left: 12px;
+    font-size: 12px;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   `
 
   return (
     <LabelInput
-      className="label-input"
+      className="label"
     >
      { labelText }
     </LabelInput>

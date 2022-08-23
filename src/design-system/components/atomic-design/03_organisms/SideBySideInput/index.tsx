@@ -18,9 +18,15 @@ export function SideBySideInput({
   inputValueRight,
   labelTextRight
   }: Props) {
+    
   const SideBySideInput = styled.div `
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   `
 
   return (
