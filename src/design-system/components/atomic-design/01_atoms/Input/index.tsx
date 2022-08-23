@@ -18,6 +18,13 @@ export function Input({placeholder, value}: Props) {
     ::placeholder {
       color: #000;
     }
+
+    :focus,
+    :active,
+    :focus-visible {
+      outline: 1px #1e76d8 solid;
+      border: 1px transparent solid;
+    }
   `
 
   return (
