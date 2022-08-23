@@ -13,6 +13,7 @@ export function Input({placeholder, value}: Props) {
     padding: 28px 12px 10px;
     color: #000;
     margin-bottom: 20px;
+    width: calc(100% - 26px);
 
     ::placeholder {
       color: #000;

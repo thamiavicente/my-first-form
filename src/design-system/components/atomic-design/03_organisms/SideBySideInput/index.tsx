@@ -27,6 +27,14 @@ export function SideBySideInput({
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
+    .field{
+      @media(min-width: 1024px) {
+        width: 48%;
+      }
+
+      width: 100%;
+    }
   `
 
   return (

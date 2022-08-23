@@ -8,6 +8,7 @@ export function Form() {
   const Form = styled.div `
     @media (min-width: 1024px) {
       width: 80%;
+      max-width: 768px;
     }
 
     width: 90%;
@@ -18,7 +19,7 @@ export function Form() {
 
     .button {
       @media (min-width: 1024px) {
-        width: 20%;
+        width: 24%;
         align-self: flex-end;
       }
       

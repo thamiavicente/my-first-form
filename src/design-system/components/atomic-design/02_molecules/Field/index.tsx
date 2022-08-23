@@ -14,7 +14,7 @@ export function Field({inputPlaceholder, inputValue, labelText}: Props) {
   `
 
   return (
-    <Field>
+    <Field className="field">
       <Input
         placeholder={inputPlaceholder}
         value={inputValue}
