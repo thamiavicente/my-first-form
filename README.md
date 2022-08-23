@@ -1,15 +1,15 @@
 # :atom_symbol: My first form - Learning React + TS :atom_symbol:
 
 ## :ballot_box_with_check: Class subjects
-[X] Vite
-[X] React
-[X] Typescript
-[X] Styled Components
-[X] Atomic Design
+- [X] Vite
+- [X] React
+- [X] Typescript
+- [X] Styled Components
+- [X] Atomic Design
 
 ## :warning: Prerequisites
-- [Nodejs ^ v16.13.1](https://nodejs.org/en/)
-- [Yarn ^ 1.22.18](https://yarnpkg.com/getting-started/install)
+- [Nodejs ^v16.13.1](https://nodejs.org/en/)
+- [Yarn ^1.22.18](https://yarnpkg.com/getting-started/install)
 - [Typescript ^4.6.4](https://www.typescriptlang.org/download)
 
 ## :books: Frameworks and libs
@@ -33,7 +33,7 @@ yarn install
 ```
 yarn vite
 ```
-<p>4. Access the project's localhost. The default port is <a href="http://127.0.0.1:5173/">5173</a></p>
+<p>4. Access the project's localhost. The default port is <a href="http://127.0.0.1:5173/" target="_blank">5173</a></p>
 
 
 ## :lock: License
