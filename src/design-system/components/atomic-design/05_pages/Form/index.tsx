@@ -3,6 +3,7 @@ import { SideBySideInput } from '../../03_organisms/SideBySideInput';
 import { Field } from '../../02_molecules/Field';
 import { DragAndDrop } from '../../02_molecules/DragAndDrop';
 import { Button } from '../../01_atoms/Button';
+import { Title } from '../../01_atoms/Title';
 
 export function Form() {
   const Form = styled.div `
@@ -29,6 +30,9 @@ export function Form() {
 
   return (
     <Form className="form">
+      <Title
+        titleText="Formulário"
+      />
       <SideBySideInput
         inputPlaceholderLeft="Nome do Projeto"
         inputValueLeft=""
