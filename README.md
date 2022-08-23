@@ -21,7 +21,7 @@
 <p>1. Clone the project </p>
 
 ```
-git clone https://github.com/thamiavicente/alurakut.git
+git clone https://github.com/thamiavicente/my-first-form.git
 ```
 <p>2. Install all dependencies </p>
 
