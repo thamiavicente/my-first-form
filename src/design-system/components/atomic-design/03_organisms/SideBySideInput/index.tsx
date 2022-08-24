@@ -3,10 +3,10 @@ import { Field } from '../../02_molecules/Field';
 
 type Props = {
   inputPlaceholderLeft: string;
-  inputValueLeft: string;
+  inputValueLeft?: string;
   labelTextLeft: string;
   inputPlaceholderRight: string;
-  inputValueRight: string;
+  inputValueRight?: string;
   labelTextRight: string;
 }
 

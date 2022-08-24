@@ -4,7 +4,7 @@ import { Label } from '../../01_atoms/Label';
 
 type Props = {
   inputPlaceholder: string;
-  inputValue: string;
+  inputValue?: string;
   labelText: string;
 }
 

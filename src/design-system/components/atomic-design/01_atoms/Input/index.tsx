@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 type Props = {
   placeholder: string;
-  value: string;
+  value?: string;
 }
 
-export function Input({placeholder, value}: Props) {
+export function Input({placeholder, value = ''}: Props) {
   const Input = styled.input `
     font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
     border: 1px #9f9f9f solid;
@@ -31,7 +31,7 @@ export function Input({placeholder, value}: Props) {
     <Input
       className="input"
       placeholder={placeholder}
-      value={value}
+      defaultValue={value}
     />
   )
 }

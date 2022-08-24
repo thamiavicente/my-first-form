@@ -44,7 +44,6 @@ export function Form() {
 
       <Field
         inputPlaceholder="Ex: Desenvolvedora Front End"
-        inputValue=""
         labelText="Cargo"
       />
 
