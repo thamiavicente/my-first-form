@@ -1,23 +1,12 @@
-import styled from 'styled-components';
-
-type Props = {
-  titleText: string;
-}
+import * as S from './styles'
+import { Props } from './types'
 
 export function Title({titleText}: Props) {
-  const Title = styled.h1 `
-    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-    color: #000;
-    font-size: 26px;
-    margin-bottom: 20px;
-    font-weight: bold;
-  `
-
   return (
-    <Title
+    <S.Title
       className="title"
     >
       { titleText }
-    </Title>
+    </S.Title>
   )
 }

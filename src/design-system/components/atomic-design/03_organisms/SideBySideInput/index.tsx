@@ -1,14 +1,7 @@
-import styled from 'styled-components';
-import { Field } from '../../02_molecules/Field';
+import * as S from './styles'
+import { Props } from './types'
 
-type Props = {
-  inputPlaceholderLeft: string;
-  inputValueLeft?: string;
-  labelTextLeft: string;
-  inputPlaceholderRight: string;
-  inputValueRight?: string;
-  labelTextRight: string;
-}
+import { Field } from '../../02_molecules/Field';
 
 export function SideBySideInput({
   inputPlaceholderLeft,
@@ -18,27 +11,9 @@ export function SideBySideInput({
   inputValueRight,
   labelTextRight
   }: Props) {
-    
-  const SideBySideInput = styled.div `
-    @media (min-width: 1024px) {
-      flex-direction: row;
-    }
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-    .field{
-      @media(min-width: 1024px) {
-        width: 48%;
-      }
-
-      width: 100%;
-    }
-  `
 
   return (
-    <SideBySideInput>
+    <S.SideBySideInput>
       <Field
         inputPlaceholder={inputPlaceholderLeft}
         inputValue={inputValueLeft}
@@ -50,6 +25,6 @@ export function SideBySideInput({
         inputValue={inputValueRight}
         labelText={labelTextRight}
       />
-    </SideBySideInput>
+    </S.SideBySideInput>
   )
 }
