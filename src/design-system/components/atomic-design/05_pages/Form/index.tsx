@@ -1,35 +1,22 @@
-import styled from 'styled-components';
-import { SideBySideInput } from '../../03_organisms/SideBySideInput';
-import { Field } from '../../02_molecules/Field';
-import { DragAndDrop } from '../../02_molecules/DragAndDrop';
+import * as S from './styles';
+
 import { Button } from '../../01_atoms/Button';
 import { Title } from '../../01_atoms/Title';
+import { Field } from '../../02_molecules/Field';
+import { DragAndDrop } from '../../02_molecules/DragAndDrop';
+import { SideBySideInput } from '../../03_organisms/SideBySideInput';
+
+import { useController } from './controller';
 
 export function Form() {
-  const Form = styled.div `
-    @media (min-width: 1024px) {
-      width: 80%;
-      max-width: 768px;
-    }
 
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
-
-    .button {
-      @media (min-width: 1024px) {
-        width: 24%;
-        align-self: flex-end;
-      }
-      
-      width: 100%;
-    }
-   `
+  const {register, handleSubmit, errors} = useController()
 
   return (
-    <Form className="form">
+    <S.Form
+      className="form"
+      onSubmit={handleSubmit((data) => console.log(data))}
+    >
       <Title
         titleText="Formulário"
       />
@@ -45,6 +32,7 @@ export function Form() {
       <Field
         inputPlaceholder="Ex: Desenvolvedora Front End"
         labelText="Cargo"
+        {...register("cargo")}
       />
 
       <DragAndDrop
@@ -54,7 +42,8 @@ export function Form() {
       
       <Button
         buttonText="Salvar e continuar"
+        type="submit"
       />
-    </Form>
+    </S.Form>
   )
 }

@@ -9,7 +9,7 @@ export function SideBySideInput({
   labelTextLeft,
   inputPlaceholderRight,
   inputValueRight,
-  labelTextRight
+  labelTextRight,
   }: Props) {
 
   return (

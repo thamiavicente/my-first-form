@@ -7,7 +7,7 @@ export function Input({placeholder, value = '', register}: Props) {
       className="input"
       placeholder={placeholder}
       defaultValue={value}
-      {...register}
+      register={register}
     />
   )
 }
