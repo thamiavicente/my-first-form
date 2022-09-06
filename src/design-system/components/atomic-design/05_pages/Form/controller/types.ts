@@ -1,3 +1,5 @@
 export type Props = {
-  cargo: string
+  cargo: string;
+  title: string;
+  address: string;
 }

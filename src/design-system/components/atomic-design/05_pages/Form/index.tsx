@@ -24,16 +24,19 @@ export function Form() {
         inputPlaceholderLeft="Nome do Projeto"
         inputValueLeft=""
         labelTextLeft="Título"
+        registerLeft={{...register("title")}}
         inputPlaceholderRight="URL"
         inputValueRight=""
         labelTextRight="Endereço"
+        registerRight={{...register("address")}}
       />
 
       <Field
         inputPlaceholder="Ex: Desenvolvedora Front End"
         labelText="Cargo"
-        {...register("cargo")}
+        register={{...register("cargo")}}
       />
+      {errors.cargo?.message && <span>{errors.cargo?.message}</span>}
 
       <DragAndDrop
         descriptionText="Arraste seu arquivo para cá"

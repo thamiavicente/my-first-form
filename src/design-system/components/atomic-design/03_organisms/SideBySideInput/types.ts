@@ -5,4 +5,6 @@ export type Props = {
   inputPlaceholderRight: string;
   inputValueRight?: string;
   labelTextRight: string;
+  registerRight?: any;
+  registerLeft?: any;
 }
