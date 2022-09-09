@@ -1,10 +1,8 @@
 import * as S from './styles';
 
-import { Button } from '../../01_atoms/Button';
-import { Title } from '../../01_atoms/Title';
-import { Field } from '../../02_molecules/Field';
-import { DragAndDrop } from '../../02_molecules/DragAndDrop';
-import { SideBySideInput } from '../../03_organisms/SideBySideInput';
+import { Button, ErrorMessage, Title } from '@/design-system/components/atomic-design/01_atoms';
+import { Field, DragAndDrop } from '@/design-system/components/atomic-design/02_molecules';
+import { SideBySideInput } from '@/design-system/components/atomic-design/03_organisms';
 
 import { useController } from './controller';
 
@@ -28,15 +26,15 @@ export function Form() {
         inputPlaceholderRight="URL"
         inputValueRight=""
         labelTextRight="Endereço"
-        registerRight={{...register("address")}}
+        registerRight={{...register("url")}}
       />
+      {errors.url?.message && <ErrorMessage errorMessage={errors.url?.message}/>}
 
       <Field
         inputPlaceholder="Ex: Desenvolvedora Front End"
         labelText="Cargo"
         register={{...register("cargo")}}
       />
-      {errors.cargo?.message && <span>{errors.cargo?.message}</span>}
 
       <DragAndDrop
         descriptionText="Arraste seu arquivo para cá"
