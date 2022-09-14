@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Input = styled.input `
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   border: 1px #9f9f9f solid;
   border-radius: 4px;
   padding: 28px 12px 10px;

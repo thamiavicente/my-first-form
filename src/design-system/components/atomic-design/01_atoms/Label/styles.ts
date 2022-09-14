@@ -6,5 +6,4 @@ export const LabelInput = styled.label `
   top: 18px;
   left: 12px;
   font-size: 12px;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 `
