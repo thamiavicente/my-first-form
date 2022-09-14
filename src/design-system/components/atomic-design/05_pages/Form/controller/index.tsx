@@ -1,18 +1,19 @@
 import { useForm } from 'react-hook-form';
 import { Props } from './types';
 import * as yup from 'yup';
-import {yupResolver} from '@hookform/resolvers/yup';
-import { isUrl } from '@/helpers';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { isUrl, isEmail } from '@/helpers';
 
 const schema = yup.object({
-  cargo: yup.string().test('is-test', 'Não é um nome válido', (value) => {
-    if(value?.length >= 3) return true;
-    return false;
-  }).required('Campo obrigatório'),
-  title: yup.string().required('Campo obrigatório'),
-  url: yup.string().test('is-url', 'Não é uma url', (value) => {
+  name: yup.string().required('Campo obrigatório'),
+  email: yup.string().required('Campo obrigatório')
+  .test('is-test', 'Insira um e-mail válido', (value) => {
+    return isEmail(value as string);
+  }),
+  url: yup.string().required('Campo obrigatório')
+  .test('is-url', 'Insira uma url válida', (value) => {
     return isUrl(value as string);
-  }).required('Campo obrigatório'),
+  }),
 })
 
 export function useController() {
