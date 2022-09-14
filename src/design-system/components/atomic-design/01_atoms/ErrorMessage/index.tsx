@@ -5,14 +5,14 @@ import { faCircleExclamation } from '@fortawesome/free-solid-svg-icons'
 
 export function ErrorMessage({errorMessage = 'Operação inválida'}: Props) {
   return (
-    <S.Container>
+    <S.ErrorMessage>
       <FontAwesomeIcon
         className="font-awesome-icon"
         icon={faCircleExclamation}
       />
-      <S.ErrorMessage>
+      <S.ErrorMessageText>
         { errorMessage }
-      </S.ErrorMessage>
-    </S.Container>
+      </S.ErrorMessageText>
+    </S.ErrorMessage>
   )
 }
