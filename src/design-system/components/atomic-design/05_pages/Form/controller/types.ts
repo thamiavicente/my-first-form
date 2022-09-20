@@ -1,5 +1,5 @@
 export type Props = {
-  cargo: string;
-  title: string;
+  name: string;
   url: string;
+  email: string;
 }

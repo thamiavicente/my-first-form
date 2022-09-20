@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { DragAndDropComponent } from './types';
 
-export const DragAndDrop = styled.div `
+export const DragAndDrop = styled.div<DragAndDropComponent> `
   @media (min-width: 1024px) {
     flex-direction: row;
   }
@@ -8,12 +9,13 @@ export const DragAndDrop = styled.div `
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px #9f9f9f dashed;
+  border: ${props => props?.isActive ? '2px #1e76d8 dashed' : '2px #9f9f9f dashed'};
   padding: 30px;
   border-radius: 8px;
   margin: 20px 0 40px;
   cursor: pointer;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
 
   .font-awesome-icon {
     @media (min-width: 1024px) { 

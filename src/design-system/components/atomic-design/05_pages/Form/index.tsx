@@ -19,22 +19,24 @@ export function Form() {
         titleText="Formulário"
       />
       <SideBySideInput
-        inputPlaceholderLeft="Nome do Projeto"
+        inputPlaceholderLeft="Nome e sobrenome"
         inputValueLeft=""
-        labelTextLeft="Título"
-        registerLeft={{...register("title")}}
+        labelTextLeft="Nome"
+        registerLeft={{...register("name")}}
         inputPlaceholderRight="URL"
         inputValueRight=""
         labelTextRight="Endereço"
         registerRight={{...register("url")}}
       />
+      {errors.name?.message && <ErrorMessage errorMessage={errors.name?.message}/>}
       {errors.url?.message && <ErrorMessage errorMessage={errors.url?.message}/>}
 
       <Field
-        inputPlaceholder="Ex: Desenvolvedora Front End"
-        labelText="Cargo"
-        register={{...register("cargo")}}
+        inputPlaceholder="email@dominio.com"
+        labelText="E-mail"
+        register={{...register("email")}}
       />
+      {errors.email?.message && <ErrorMessage errorMessage={errors.email?.message}/>}
 
       <DragAndDrop
         descriptionText="Arraste seu arquivo para cá"

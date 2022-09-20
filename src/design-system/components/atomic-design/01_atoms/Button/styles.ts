@@ -8,7 +8,6 @@ export const Button = styled.button`
   border-radius: 4px;
   cursor: pointer;
   font-weight: bold;
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
 
   &:hover {
     background-color: #fff;
