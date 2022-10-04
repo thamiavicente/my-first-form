@@ -40,17 +40,18 @@ export function DragAndDrop({ descriptionText, buttonText }: Props) {
         <Button buttonText={buttonText} />
       </S.DragAndDrop>
 
-      <S.UlSelectedFiles>
-        {files.map((file, index) => (
-          <li className="" key={index}>
-            <button onClick={(event) => removeCurrentFile(event, file.file)}>
-              <FontAwesomeIcon className="font-awesome-icon" icon={faX} />
-            </button>
-            {file.file.name} - {file.file.size} bytes
-          </li>
-        ))}
-      </S.UlSelectedFiles>
-    
+      {files.length > 0 && (
+        <S.UlSelectedFiles>
+          {files.map((file, index) => (
+            <li className="" key={index}>
+              <button onClick={(event) => removeCurrentFile(event, file.file)}>
+                <FontAwesomeIcon className="font-awesome-icon" icon={faX} />
+              </button>
+              {file.file.name} - {file.file.size} bytes
+            </li>
+          ))}
+        </S.UlSelectedFiles>
+      )}
     </>
   );
 }
