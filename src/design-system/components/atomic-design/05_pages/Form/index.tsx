@@ -16,29 +16,23 @@ export function Form() {
         inputPlaceholder="Nome e sobrenome"
         labelText="Nome"
         register={{ ...register("name") }}
-      />
-      {errors.name?.message && (
-        <ErrorMessage errorMessage={errors.name?.message} />
-      )}
+        hasErrors={errors.name && {hasErrors: true, errorMessage: errors.name?.message}}
+        />
 
       <Field
         inputPlaceholder="URL"
         inputValue=""
         labelText="Endereço"
         register={{ ...register("url") }}
-      />
-      {errors.url?.message && (
-        <ErrorMessage errorMessage={errors.url?.message} />
-      )}
+        hasErrors={errors.url && {hasErrors: true, errorMessage: errors.url?.message}}
+        />
 
       <Field
         inputPlaceholder="email@dominio.com"
         labelText="E-mail"
         register={{ ...register("email") }}
-      />
-      {errors.email?.message && (
-        <ErrorMessage errorMessage={errors.email?.message} />
-      )}
+        hasErrors={errors.email && {hasErrors: true, errorMessage: errors.email?.message}}
+        />
 
       <DragAndDrop
         descriptionText="Arraste seu arquivo para cá"

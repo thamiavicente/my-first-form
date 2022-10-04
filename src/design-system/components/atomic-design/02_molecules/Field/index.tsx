@@ -5,19 +5,19 @@ import { Input } from '../../01_atoms/Input';
 import { Label } from '../../01_atoms/Label';
 
 import { FieldValues, UseFormRegister } from 'react-hook-form';
+import { ErrorMessage } from "../../01_atoms";
 
-export function Field({inputPlaceholder, inputValue, labelText, register}: Props) {
+export function Field({inputPlaceholder, inputValue, labelText, register, hasErrors}: Props) {
   return (
-    <S.Field className="field">
-      <Input
-        placeholder={inputPlaceholder}
-        value={inputValue}
-        register={register}
-      />
+      <S.Field className="field">
+        <Input
+          placeholder={inputPlaceholder}
+          value={inputValue}
+          register={register}
+        />
 
-      <Label
-        labelText={labelText}
-      />
-    </S.Field>
-  )
+        <Label labelText={labelText} />
+        {hasErrors && <ErrorMessage errorMessage={hasErrors.errorMessage} />}
+      </S.Field>
+  );
 }
