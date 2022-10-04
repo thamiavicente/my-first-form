@@ -1,14 +1,8 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
-  @media (min-width: 1024px) {
-    width: 80%;
-    max-width: 768px;
-  }
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 100px);
   grid-column-gap: 20px;
   margin: auto;
   width: 90%;
@@ -36,5 +30,19 @@ export const Form = styled.form`
   div:nth-child(3) {
     grid-column-start: 2;
     grid-column-end: 3;
+  }
+
+  @media (min-width: 1024px) {
+    width: 80%;
+    max-width: 768px;
+  }
+
+  @media (max-width: 425px) {
+    grid-template-columns: 1fr;
+    div:nth-child(2),
+    div:nth-child(3) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 `;
