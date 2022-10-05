@@ -3,4 +3,5 @@ export type Props = {
   inputValue?: string;
   labelText: string;
   register: any;
-}
+  hasErrors?: { hasErrors: boolean; errorMessage: string | undefined };
+};

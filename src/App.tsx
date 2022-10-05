@@ -1,5 +1,5 @@
-import { Form } from '../src/design-system/components/atomic-design/05_pages/Form'
-import { GlobalStyle } from './styles/global'
+import { Form } from "../src/design-system/components/atomic-design/05_pages/Form";
+import { GlobalStyle } from "./styles/global";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <GlobalStyle />
       <Form />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
